@@ -6,11 +6,8 @@ This project uses Test-Driven-Development (TDD) and Red/Green tests. Pre-commit 
 
 When possible automated UI testing should be used to diagnose UI issues and verify UI features and fixes. When not available, Rust curl-equivalent code (reqwest) to fetch html, to verify that elements appear, css checks out, etc. To aid debugging, the back-end rest (and static file) server should have extensive logging and the WASM frontend code should also have fine-grain logging to the browser console (or to debug divs at the bottom of the UI). The CLI should accept different granularity logging/debugging flags.
 
-Start with a ./docs directory and create markdown files for: architecture, prd, design, plan, process, and status.  This will use Java 17, Gradle 8.x, Android ~35, modern CSS, best practices,
+Start with a ./docs directory and create markdown files for: architecture, prd, design, plan, process, and status. This will use Java 17, Gradle 8.x, Android ~35, modern CSS, best practices,
 
 The APIs are documented at: https://github.com/softwarewrighter/crudibase
 
 The app should use HTTPS to authenticate with the Digital Ocean droplet/docker crudibase app running at: https://crudibase.codingtech.info/
-
-
-
