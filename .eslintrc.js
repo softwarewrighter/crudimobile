@@ -37,4 +37,18 @@ module.exports = {
     'react-native/no-color-literals': 'warn',
     'no-console': ['warn', { allow: ['warn', 'error'] }],
   },
+  overrides: [
+    {
+      files: ['*.js'],
+      rules: {
+        '@typescript-eslint/no-require-imports': 'off',
+      },
+    },
+    {
+      files: ['src/shared/utils/logger.ts'],
+      rules: {
+        'no-console': 'off',
+      },
+    },
+  ],
 };

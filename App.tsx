@@ -16,29 +16,29 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: '#fff',
+    flex: 1,
   },
   content: {
-    flex: 1,
     alignItems: 'center',
+    flex: 1,
     justifyContent: 'center',
     padding: 20,
   },
-  title: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    color: '#1976D2',
-    marginBottom: 8,
-  },
   subtitle: {
-    fontSize: 16,
     color: '#757575',
+    fontSize: 16,
     marginBottom: 4,
   },
+  title: {
+    color: '#1976D2',
+    fontSize: 32,
+    fontWeight: 'bold',
+    marginBottom: 8,
+  },
   version: {
-    fontSize: 12,
     color: '#9E9E9E',
+    fontSize: 12,
     marginTop: 20,
   },
 });
