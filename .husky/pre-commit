@@ -1,0 +1,28 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "Running pre-commit checks..."
+
+# Format code
+echo "→ Formatting code..."
+npm run format --loglevel=error
+
+# Lint code
+echo "→ Linting code..."
+npm run lint
+
+# Type check
+echo "→ Type checking..."
+npm run type-check
+
+# Run tests
+echo "→ Running tests..."
+npm test -- --bail --passWithNoTests
+
+# Check .gitignore is valid
+echo "→ Checking .gitignore..."
+if ! git check-ignore -q node_modules/.gitkeep 2>/dev/null; then
+  echo "Note: node_modules should be in .gitignore"
+fi
+
+echo "✓ All pre-commit checks passed!"
